@@ -18,7 +18,7 @@ public class CreateMapTest {
         }
 
         System.out.println("createMap.withArgs() = " + createMap.withArgs());
-        Assert.assertNotEquals(createMap.withoutArgs(), successMap); // 普通にやったら順序正常になってしまっているー　・。・??
-        Assert.assertEquals(createMap.withArgs(), successMap);
+        Assert.assertEquals(createMap.withArgs().entrySet(), successMap.entrySet());
+        Assert.assertNotEquals(createMap.withoutArgs().entrySet(), successMap.entrySet()); // 普通にやったら順序正常になってしまっているー　・。・??
     }
 }
